@@ -249,13 +249,26 @@ def generate_answer_stream(question):
 
 import gradio as gr
 
-with gr.Blocks() as demo:
+with gr.Blocks(
+    theme=gr.themes.Soft(),
+    css="""
+    #taxaid-logo img {
+        width: 460px;
+        margin: 20px auto 10px auto;
+        display: block;
+        filter: brightness(1.15) drop-shadow(0 0 18px rgba(0, 200, 255, 0.6));
+    }
+    """
+) as demo:
 
-    gr.Image("logo.png", width=400)
-
+    gr.Image(
+    "logo.png",
+    show_label=False,
+    container=False,
+    elem_id="taxaid-logo"
+    )
     gr.Markdown(
         """
-        # TaxAId
         ### Grounded Answers from Official IRS Publications
 
         Ask a question about IRS tax rules.
@@ -322,5 +335,5 @@ with gr.Blocks() as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(theme=gr.themes.Soft())
+    demo.launch()
 

@@ -4,6 +4,9 @@
 
 It retrieves relevant sections from IRS PDFs, routes queries using structured metadata filters, and generates controlled, citation-anchored responses using a locally hosted open-weight LLM.
 
+## 📸 Application Preview
+![TaxAId UI](assets/taxaid-ui.png)
+
 ---
 
 ## 🚀 Overview
