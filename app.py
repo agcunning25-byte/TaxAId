@@ -176,7 +176,7 @@ with gr.Blocks() as demo:
         """
     )
 
-    chatbot = gr.Chatbot(height=350)
+    chatbot = gr.Chatbot(height=250)
 
     user_input = gr.Textbox(
         placeholder="Ask a tax question (e.g. Can I deduct mileage for my car?)",
