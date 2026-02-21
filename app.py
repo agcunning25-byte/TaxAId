@@ -176,7 +176,7 @@ with gr.Blocks() as demo:
         """
     )
 
-    chatbot = gr.Chatbot(height=200)
+    chatbot = gr.Chatbot(height=350)
 
     user_input = gr.Textbox(
         placeholder="Ask a tax question (e.g. Can I deduct mileage for my car?)",
@@ -188,22 +188,27 @@ with gr.Blocks() as demo:
     def respond(message, chat_history):
         chat_history = chat_history or []
         chat_history.append({"role": "user", "content": message})
-        chat_history.append({"role": "assistant", "content": ""})
+        chat_history.append({
+            "role": "assistant",
+            "content": "🧠 TaxAId is reviewing IRS publications..."
+        })
 
         yield chat_history, ""
 
         response = ""
-        
+
         for chunk in generate_answer_stream(message):
             response += chunk
             chat_history[-1]["content"] = response
             yield chat_history, ""
 
+        
+
     submit_btn.click(
         respond,
         inputs=[user_input, chatbot],
         outputs=[chatbot, user_input],
-        show_progress=True,
+        show_progress="minimal",
     )
 
     gr.Markdown(
