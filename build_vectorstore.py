@@ -32,6 +32,31 @@ publication_metadata = {
     "pub535.pdf": {
         "topic": "business_expenses",
         "entity": "business"
+    },
+
+    "pub501.pdf": {
+        "topic": "filing_dependents",
+        "entity": "individual"
+    },
+    "pub502.pdf": {
+        "topic": "medical_expenses",
+        "entity": "individual"
+    },
+    "pub503.pdf": {
+        "topic": "dependent_care_credit",
+        "entity": "individual"
+    },
+    "pub525.pdf": {
+        "topic": "income_rules",
+        "entity": "individual"
+    },
+    "pub594.pdf": {
+        "topic": "irs_collections",
+        "entity": "individual_and_business"
+    },
+    "pub969.pdf": {
+        "topic": "health_accounts",
+        "entity": "individual"
     }
 }
 
