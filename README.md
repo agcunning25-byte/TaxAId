@@ -4,12 +4,17 @@
 
 It retrieves relevant sections from IRS PDFs, routes queries using structured metadata filters, and generates controlled, citation-anchored responses using a locally hosted open-weight LLM.
 
-## 📸 Application Preview
-![TaxAId UI](assets/taxaid-ui.png)
+## 🎥 Demo
+<p align="center">
+  <img src="taxaid-demo.gif" width="800"/>
+</p>
 
 ---
 
-## 🚀 Overview
+## 🚀 Live Deployment
+ - Hugging Face Space: https://huggingface.co/spaces/SpaceMonkey25/TaxAId
+
+## 🕶️ Overview
 
 TaxAId was built to demonstrate production-grade RAG architecture with:
 
